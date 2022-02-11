@@ -14,7 +14,17 @@ public class Digits
      */
     public Digits(int num)
     {
-        /* to be implemented in part (a) */
+        digitList = new ArrayList<Integer>();
+        if (num == 0)
+        {
+            // adding an int directly to an Integer arraylist uses autoboxing
+            digitList.add(0);
+        }
+        while (num > 0)
+        {
+            digitList.add(0, num % 10);
+            num /= 10;
+        }
     }
 
     // GETTER METHOD: added to enable test code (not provided in original FRQ)
@@ -29,6 +39,29 @@ public class Digits
      */
     public boolean isStrictlyIncreasing()
     {
-        /* to be implemented in part (b) */
+        boolean value = true;
+        // Integer to int uses unboxing here
+        for (int i = 0; i < digitList.size()-1; i++)
+        {
+            if (digitList.get(i) >= digitList.get(i+1))
+            {
+                value = false;
+            }
+        }
+        return value;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
