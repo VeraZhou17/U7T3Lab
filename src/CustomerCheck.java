@@ -67,6 +67,7 @@ public class CustomerCheck
 
         }
 
+        // counting number of Customers
         if (numOfEntrees >= 6)
         {
             tip = (finalCheck * 0.20);
