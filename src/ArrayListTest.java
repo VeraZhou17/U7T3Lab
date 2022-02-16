@@ -57,7 +57,7 @@ public class ArrayListTest
             numList.set(i-1, currentNum);
         }
         System.out.println(numList);
-
+        System.out.println();
 
     }
 }
